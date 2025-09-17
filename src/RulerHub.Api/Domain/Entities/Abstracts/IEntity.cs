@@ -1,4 +1,4 @@
-﻿namespace RulerHub.Api.Core.Entities.Abstracts;
+﻿namespace RulerHub.Api.Domain.Entities.Abstracts;
 
 public interface IEntity<TKey>
 {

@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-using RulerHub.Api.Core.Entities.Stores;
-
 namespace RulerHub.Api.Infrastructure.Configuration.Stores;
 
 public class ProductConfig : IEntityTypeConfiguration<Product>

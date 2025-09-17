@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-using RulerHub.Api.Core.Entities.Stores;
+using RulerHub.Api.Domain.Entities.Stores;
 
 namespace RulerHub.Api.Infrastructure.Configuration.Stores;
 

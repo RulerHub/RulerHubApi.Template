@@ -2,7 +2,7 @@
 
 public interface IUnitOfWork
 {
-    IProductRepository Products {  get; }
+    IProductRepository Products { get; }
     //ICategoryRepository Categories { get; }
     Task<int> SaveChangesAsync();
     Task BeginTransactionAsync();

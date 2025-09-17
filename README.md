@@ -1,1 +1,3 @@
-# RulerHubApi.Template
+# RulerHubApi Template
+
+plantilla para RulerHubApi 

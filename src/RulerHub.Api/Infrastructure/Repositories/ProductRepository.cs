@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 using RulerHub.Api.Application.DTOs.Products;
-using RulerHub.Api.Core.Entities.Stores;
 using RulerHub.Api.Domain.Interfaces;
 using RulerHub.Api.Infrastructure.Data;
 
@@ -24,7 +23,7 @@ public class ProductRepository(ApplicationDbContext context) : IProductRepositor
 
     public async Task<IEnumerable<Product>> GetAllAsync()
     => await _context.Products
-        .Include(p => p.Category)
+        //.Include(p => p.Category)
         .ToListAsync();
 
     public async Task<Product?> GetByIdAsync(Guid id)
@@ -35,7 +34,7 @@ public class ProductRepository(ApplicationDbContext context) : IProductRepositor
     public async Task<(IEnumerable<Product> Items, int TotalCount)> GetFilteredAsync(ProductQueryParams query)
     {
         var q = _context.Products
-            .Include(p => p.Category)
+            //.Include(p => p.Category)
             .AsQueryable();
         if (!string.IsNullOrWhiteSpace(query.Search))
             q = q.Where(p => p.Name.Contains(query.Search));
@@ -54,7 +53,7 @@ public class ProductRepository(ApplicationDbContext context) : IProductRepositor
             .Take(query.PageSize)
             .ToListAsync();
 
-        return (items, total);
+        return (q, total);
     }
 
     public async Task UpdateAsync(Product entity)

@@ -1,15 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36408.4 d17.14
+VisualStudioVersion = 17.14.36408.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{CEAB49EF-2D13-4E79-A65E-3AEBE02E5381}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "distribution", "distribution", "{D054C2AD-1C9B-44AC-91F2-A1B4475B8486}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RulerHub.Api", "src\RulerHub.Api\RulerHub.Api.csproj", "{1E30D89D-DFD6-4B24-BE4E-409656E10C60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.AppHost", "distribution\Aspire.AppHost\Aspire.AppHost.csproj", "{6530B9DB-7AB5-4584-9782-F58DBA80680C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.ServiceDefaults", "distribution\Aspire.ServiceDefaults\Aspire.ServiceDefaults.csproj", "{71033E76-7876-99B8-4FDB-9A0523A26789}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,12 +31,22 @@ Global
 		{1E30D89D-DFD6-4B24-BE4E-409656E10C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E30D89D-DFD6-4B24-BE4E-409656E10C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E30D89D-DFD6-4B24-BE4E-409656E10C60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6530B9DB-7AB5-4584-9782-F58DBA80680C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6530B9DB-7AB5-4584-9782-F58DBA80680C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6530B9DB-7AB5-4584-9782-F58DBA80680C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6530B9DB-7AB5-4584-9782-F58DBA80680C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71033E76-7876-99B8-4FDB-9A0523A26789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71033E76-7876-99B8-4FDB-9A0523A26789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71033E76-7876-99B8-4FDB-9A0523A26789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71033E76-7876-99B8-4FDB-9A0523A26789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1E30D89D-DFD6-4B24-BE4E-409656E10C60} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{6530B9DB-7AB5-4584-9782-F58DBA80680C} = {D054C2AD-1C9B-44AC-91F2-A1B4475B8486}
+		{71033E76-7876-99B8-4FDB-9A0523A26789} = {D054C2AD-1C9B-44AC-91F2-A1B4475B8486}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9760BF1D-69C8-474A-A3C1-F36C8D25CBCA}

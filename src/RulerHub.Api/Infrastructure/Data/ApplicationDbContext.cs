@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-using RulerHub.Api.Core.Entities.Stores;
+using RulerHub.Api.Domain.Entities.Stores;
 
 namespace RulerHub.Api.Infrastructure.Data;
 

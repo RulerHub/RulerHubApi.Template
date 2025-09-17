@@ -1,5 +1,5 @@
 ﻿namespace RulerHub.Api.Application.DTOs.Products;
 
-    public record ProductCreateDto
-    (string Name, decimal Price, int CategoryId);
+public record ProductCreateDto
+(string Name, decimal Price/*, int CategoryId*/);
 
