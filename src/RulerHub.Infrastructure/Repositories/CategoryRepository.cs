@@ -28,12 +28,14 @@ namespace RulerHub.Infrastructure.Repositories
 
         public async Task<Category?> GetByIdAsync(Guid id)
         => await _context.Categories
+            .Include(p => p.Products)
             .FirstOrDefaultAsync(p => p.Id == id);
 
         public async Task<(IEnumerable<Category> Items, int TotalCount)> GetFilteredAsync(CategoryQueryParams query)
         {
             var q = _context.Categories
-            .AsQueryable();
+                .Include(p => p.Products)
+                .AsQueryable();
             if (!string.IsNullOrWhiteSpace(query.Search))
                 q = q.Where(p => p.Name.Contains(query.Search));
             q = query.SortBy?.ToLower() switch

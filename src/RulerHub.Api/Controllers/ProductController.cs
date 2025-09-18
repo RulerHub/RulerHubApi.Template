@@ -23,6 +23,7 @@ public class ProductController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult> Get([FromQuery] ProductQueryParams query)
     {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
         var (items, count) = await _service.GetFilteredAsync(query);
         return Ok(new { items, count });
     }
@@ -48,6 +49,7 @@ public class ProductController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<ProductDto>> GetById(Guid id)
     {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
         var product = await _service.GetByIdAsync(id);
         return product is null ? NotFound() : Ok(product);
     }
@@ -59,6 +61,7 @@ public class ProductController : ControllerBase
     [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<ProductDto>> Create([FromBody] ProductCreateDto dto)
     {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
         var created = await _service.CreateAsync(dto);
         return Ok(created);
     }
@@ -71,6 +74,7 @@ public class ProductController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Update(Guid id, [FromBody] ProductCreateDto dto)
     {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
         await _service.UpdateAsync(id, dto);
         var result = await _service.GetByIdAsync(id);
         return Ok(result);
@@ -83,6 +87,7 @@ public class ProductController : ControllerBase
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<IActionResult> Delete(Guid id)
     {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
         await _service.DeleteAsync(id);
         return NoContent();
     }
