@@ -1,8 +1,9 @@
-﻿using RulerHub.Api.Application.Interfaces.Services;
-using RulerHub.Api.Application.Services;
-using RulerHub.Api.Domain.Interfaces;
-using RulerHub.Api.Infrastructure.Repositories;
-using RulerHub.Api.Infrastructure.UnitOfWorks;
+﻿using RulerHub.Application.Interfaces.Services;
+using RulerHub.Application.Services;
+using RulerHub.Domain.Interfaces.Abstracts;
+using RulerHub.Domain.Interfaces.Stores;
+using RulerHub.Infrastructure.Data.UnitOfWorks;
+using RulerHub.Infrastructure.Repositories;
 
 namespace RulerHub.Api.Extensions;
 

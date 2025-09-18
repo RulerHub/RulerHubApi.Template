@@ -1,6 +1,7 @@
-﻿using RulerHub.Api.Application.DTOs.Products;
-using RulerHub.Api.Application.Interfaces.Mappers;
-using RulerHub.Api.Application.Mappers;
+﻿using RulerHub.Application.DTOs.Products;
+using RulerHub.Application.Interfaces.Mappers;
+using RulerHub.Application.Mappers;
+using RulerHub.Domain.Entities.Stores;
 
 namespace RulerHub.Api.Extensions;
 

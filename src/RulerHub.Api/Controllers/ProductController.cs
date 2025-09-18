@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-using RulerHub.Api.Application.DTOs.Products;
-using RulerHub.Api.Application.Interfaces.Services;
+using RulerHub.Application.DTOs.Products;
+using RulerHub.Application.Interfaces.Services;
+using RulerHub.Domain.Entities.Abstracts;
 
 namespace RulerHub.Api.Controllers;
 

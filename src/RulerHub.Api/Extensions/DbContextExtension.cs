@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-using RulerHub.Api.Infrastructure.Data;
+using RulerHub.Infrastructure.Data;
 
 namespace RulerHub.Api.Extensions;
 
